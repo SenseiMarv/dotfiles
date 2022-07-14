@@ -78,5 +78,8 @@ export DEV_SCRIPT_TAG_URLS=$DEV_SCRIPT_TAG_URLS
 # Add SSH Keys to Keychain
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
 
+# Enable automatic update for oh-my-zsh
+zstyle ':omz:update' mode auto
+
 # Fix slow paste speeds with zsh-syntax-highlighting
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
