@@ -8,6 +8,8 @@
 
 - chezmoi installed (preferably via the package manager): <https://www.chezmoi.io/install/>
 
+- 1Password and 1Password CLI installed (preferably via the package manager): <https://1password.com/de/downloads/>, <https://1password.com/de/downloads/command-line/>
+
 ## Installation
 
 Initialize chezmoi with this dotfiles repository:
@@ -32,16 +34,32 @@ chezmoi apply -v
 
 ### Update files
 
-#### NEVER UPDATE THE DOTFILES DIRECTLY
+**Please be cautious to not leak secrets!** You can add secrets using the [Password manager integration](https://www.chezmoi.io/user-guide/password-managers/) or by using a password manager CLI (e.g. <https://developer.1password.com/docs/cli/>)
+
+#### Through chezmoi (will automatically commit and push the changes after the edit)
 
 ```bash
 chezmoi edit $FILE
 ```
 
-After editing a file, the changes have to be applied:
+After editing a file, the changes have to be applied (this step can be skipped if the `-a` / `--apply` flag was used in the command above):
 
 ```bash
 chezmoi apply -v
+```
+
+#### Manually (will automatically commit and push the changes after the re-add)
+
+e.g.
+
+```bash
+code $FILE
+```
+
+After editing a tracked file manually, it has to be re-added:
+
+```bash
+chezmoi add $FILE
 ```
 
 ### Pull updates
