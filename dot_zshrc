@@ -40,10 +40,10 @@ eval "$(op completion zsh)"; compdef _op op
 source ~/.openconnect_vpn.sh
 
 # Load debug-env
-PATH="/Users/mstickel/projects/beyond/ng-dev-tools/debug-env:${PATH}"
+PATH="$HOME/projects/beyond/ng-dev-tools/debug-env:${PATH}"
 
 # Load rabbitmq.py
-PATH="/Users/mstickel/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
+PATH="$HOME/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
 
 # Load secrets
 [ -f ~/.secrets ] && source ~/.secrets
