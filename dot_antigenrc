@@ -1,0 +1,26 @@
+# ´antigen init´ command doesn't look into bundle configuration changes,
+# thus ´antigen reset´ is needed to reload plugins
+
+antigen use oh-my-zsh
+
+antigen bundles <<EOBUNDLES
+  fzf
+  autojump
+  bgnotify
+  git
+  sudo
+  sdk
+  gradle
+  docker
+  docker-compose
+  docker-machine
+  gcloud
+
+  zsh-users/zsh-completions
+  zsh-users/zsh-autosuggestions
+  zsh-users/zsh-syntax-highlighting
+EOBUNDLES
+
+antigen theme romkatv/powerlevel10k
+
+antigen apply
