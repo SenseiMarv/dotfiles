@@ -1,0 +1,82 @@
+# Enable Antigen
+source /opt/homebrew/share/antigen/antigen.zsh
+
+# Enable Powerlevel10k instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Load Antigen configuration
+# ´antigen init´ command doesn't look into bundle configuration changes,
+# thus ´antigen reset´ is needed to reload plugins
+antigen init ~/.antigenrc
+
+# Load Powerlevel10k configuration
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Load fzf configuration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Load autojump configuration
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# Load nvm configuration and completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+
+# Load SDKMAN! configuration
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Load google-cloud-sdk configuration and completion
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+# Load 1Password CLI completion
+eval "$(op completion zsh)"; compdef _op op
+
+# Load VPN script
+source ~/.openconnect_vpn.sh
+
+# Load debug-env
+PATH="/Users/mstickel/projects/beyond/ng-dev-tools/debug-env:${PATH}"
+
+# Load rabbitmq.py
+PATH="/Users/mstickel/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
+
+# Load secrets
+[ -f ~/.secrets ] && source ~/.secrets
+
+# Expose Vault address
+export VAULT_ADDR=$VAULT_ADDR
+
+# Expose ADMIN_CLIENT_SECRET
+export ADMIN_CLIENT_SECRET=$ADMIN_CLIENT_SECRET
+
+# Expose CLOUDAMQP_USER
+export CLOUDAMQP_USER=$CLOUDAMQP_USER
+
+# Expose CLOUDAMQP_PASS
+export CLOUDAMQP_PASS=$CLOUDAMQP_PASS
+
+# Expose CLOUDAMQP_HOST
+export CLOUDAMQP_HOST=$CLOUDAMQP_HOST
+
+# Expose CLOUDAMQP_VHOST
+export CLOUDAMQP_VHOST=$CLOUDAMQP_VHOST
+
+# Expose MESSAGE_ENCRYPTION_SECRET
+export MESSAGE_ENCRYPTION_SECRET=$MESSAGE_ENCRYPTION_SECRET
+
+# Expose STRIPE_API_KEY
+export STRIPE_API_KEY=$STRIPE_API_KEY
+
+# Expose DEV_SCRIPT_TAG_URLS
+export DEV_SCRIPT_TAG_URLS=$DEV_SCRIPT_TAG_URLS
+
+# Add SSH Keys to Keychain
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
+
+# Fix slow paste speeds with zsh-syntax-highlighting
+zstyle ':bracketed-paste-magic' active-widgets '.self-*'
