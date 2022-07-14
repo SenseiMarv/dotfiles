@@ -2,6 +2,9 @@
     command = "code"
     args = ["--wait"]
 
+[diff]
+    command = "delta"
+
 [git]
     autoCommit = true
     autoPush = true
