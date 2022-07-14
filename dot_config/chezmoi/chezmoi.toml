@@ -2,6 +2,10 @@
     command = "code"
     args = ["--wait"]
 
+[diff]
+    command = "delta"
+    args = ["--paging", "never"]
+
 [git]
     autoCommit = true
     autoPush = true
