@@ -1,0 +1,41 @@
+[core]
+	longpaths = true
+	pager = delta
+
+[user]
+	email = marv.stickel@gmail.com
+	name = Marvin Stickel
+	signingKey = 1B4E96EFED8363E2FE29452799D394D245965B30
+
+[init]
+	defaultBranch = main
+
+[commit]
+	gpgSign = true
+
+[tag]
+	forceSignAnnotated = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+# Use VSCode as default diff and merge tool
+[merge]
+	tool = vscode
+	conflictstyle = diff3
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+
+[diff]
+	tool = vscode
+	colorMoved = default
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[alias]
+	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[delta]
+	navigate = true
+	line-numbers = true
+	syntax-theme = OneHalfDark
