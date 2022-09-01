@@ -48,6 +48,9 @@ PATH="$HOME/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
 # Load secrets
 [ -f ~/.secrets ] && source ~/.secrets
 
+# Expose gpg fix
+export GPG_TTY=$(tty)
+
 # Expose Vault address
 export VAULT_ADDR=$VAULT_ADDR
 
