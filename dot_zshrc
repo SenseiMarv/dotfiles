@@ -36,6 +36,9 @@ source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completi
 # Load 1Password CLI completion
 eval "$(op completion zsh)"; compdef _op op
 
+# Load Color LS completion
+source $(dirname $(gem which colorls))/tab_complete.sh
+
 # Load VPN script
 source ~/.openconnect_vpn.sh
 
@@ -47,9 +50,6 @@ PATH="$HOME/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
 
 # Load secrets
 [ -f ~/.secrets ] && source ~/.secrets
-
-# Expose gpg fix
-export GPG_TTY=$(tty)
 
 # Expose Vault address
 export VAULT_ADDR=$VAULT_ADDR
@@ -80,6 +80,9 @@ export DEV_SCRIPT_TAG_URLS=$DEV_SCRIPT_TAG_URLS
 
 # Add SSH Keys to Keychain
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
+
+# Add Color LS alias
+alias lc='colorls -A --sd'
 
 # Enable automatic update for oh-my-zsh
 zstyle ':omz:update' mode auto
