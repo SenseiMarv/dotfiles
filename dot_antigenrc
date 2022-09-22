@@ -15,6 +15,10 @@ antigen bundles <<EOBUNDLES
   docker-compose
   docker-machine
   gcloud
+  yarn
+  yarn-autocompletions
+  zsh-npm-scripts-autocomplete
+  zsh-yup
 
   zsh-users/zsh-completions
   zsh-users/zsh-autosuggestions
