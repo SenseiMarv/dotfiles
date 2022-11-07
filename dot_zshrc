@@ -80,6 +80,7 @@ export DEV_SCRIPT_TAG_URLS=$DEV_SCRIPT_TAG_URLS
 
 # Add SSH Keys to Keychain
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
+ssh-add --apple-use-keychain ~/.ssh/digitalocean_id_ed25519 2>/dev/null
 
 # Add Color LS alias
 alias lc='colorls -A --sd'
