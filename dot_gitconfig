@@ -19,6 +19,9 @@
 [commit]
 	gpgSign = true
 
+[push]
+	autoSetupRemote = true
+
 [tag]
 	forceSignAnnotated = true
 
