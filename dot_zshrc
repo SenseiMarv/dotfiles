@@ -42,6 +42,9 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 # Load VPN script
 source ~/.openconnect_vpn.sh
 
+# Load pipx
+export PATH="$PATH:/Users/mstickel/.local/bin"
+
 # Load debug-env
 PATH="$HOME/projects/beyond/ng-dev-tools/debug-env:${PATH}"
 
