@@ -1,6 +1,5 @@
 [core]
 	longpaths = true
-	pager = delta
 
 [user]
 	email = marv.stickel@gmail.com
@@ -43,11 +42,18 @@
 
 [alias]
 	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	diff-delta = !git diff | delta
+	show-delta = !git show | delta
+	log-delta = !git log -p | delta
+	stash-show-delta = !git stash show -p | delta
+	reflog-delta = !git reflog -p | delta
+	add-delta = !git add -p | delta
+	diff-dunk = !git diff | dunk | delta
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
 
 [delta]
 	navigate = true
-	line-numbers = true
+	side-by-side = true
 	syntax-theme = OneHalfDark
