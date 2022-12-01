@@ -12,6 +12,7 @@ antigen bundles <<EOBUNDLES
   sudo
   sdk
   gradle
+  npm
   yarn
   docker
   docker-compose
@@ -24,6 +25,7 @@ antigen bundles <<EOBUNDLES
 
   grigorii-zander/zsh-npm-scripts-autocomplete@main
   redxtech/zsh-yup
+  ntnyq/omz-plugin-pnpm
 EOBUNDLES
 
 antigen theme romkatv/powerlevel10k
