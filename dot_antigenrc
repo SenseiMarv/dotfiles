@@ -25,7 +25,7 @@ antigen bundles <<EOBUNDLES
 
   grigorii-zander/zsh-npm-scripts-autocomplete@main
   redxtech/zsh-yup
-  ntnyq/omz-plugin-pnpm
+  ntnyq/omz-plugin-pnpm --branch=main
 EOBUNDLES
 
 antigen theme romkatv/powerlevel10k
