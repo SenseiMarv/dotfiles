@@ -33,6 +33,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
+# Load navi completion
+eval "$(navi widget zsh)"
+
 # Load 1Password CLI completion
 eval "$(op completion zsh)"; compdef _op op
 
@@ -86,7 +89,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
 ssh-add --apple-use-keychain ~/.ssh/digitalocean_id_ed25519 2>/dev/null
 
 # Add Color LS alias
-alias lc='colorls -A --sd'
+alias lsc='colorls -A --sd'
 
 # Enable automatic update for oh-my-zsh
 zstyle ':omz:update' mode auto
