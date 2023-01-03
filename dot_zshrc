@@ -57,6 +57,9 @@ PATH="$HOME/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
 # Load secrets
 [ -f ~/.secrets ] && source ~/.secrets
 
+# Enable new gcloud auth plugin
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 # Expose Vault address
 export VAULT_ADDR=$VAULT_ADDR
 
