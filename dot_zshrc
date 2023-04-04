@@ -94,6 +94,10 @@ ssh-add --apple-use-keychain ~/.ssh/digitalocean_id_ed25519 2>/dev/null
 # Add Color LS alias
 alias lsc='colorls -A --sd'
 
+# Add NeoVim alias
+alias vi='neovim'
+alias vim='neovim'
+
 # Enable automatic update for oh-my-zsh
 zstyle ':omz:update' mode auto
 
