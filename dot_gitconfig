@@ -4,7 +4,7 @@
 [user]
 	email = marv.stickel@gmail.com
 	name = Marvin Stickel
-	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvcGDR6/NM3Q2S3Q44RxruAEtYB6sS6Wc5+wBkApdpt
+	signingKey = 1B4E96EFED8363E2FE29452799D394D245965B30
 
 [gpg]
   format = ssh
