@@ -1,3 +1,6 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # Enable Antigen
 source /opt/homebrew/share/antigen/antigen.zsh
 
@@ -106,3 +109,6 @@ zstyle ':omz:update' mode auto
 
 # Fix slow paste speeds with zsh-syntax-highlighting
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
