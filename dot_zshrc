@@ -1,18 +1,18 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
-# Enable Antigen
-source /opt/homebrew/share/antigen/antigen.zsh
+# Enable Antdote
+source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 
 # Enable Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Load Antigen configuration
-# ´antigen init´ command doesn't look into bundle configuration changes,
-# thus ´antigen reset´ is needed to reload plugins
-antigen init ~/.antigenrc
+# Initialize Antidote plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
+# Initialize Powerlevel10k prompt
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
 
 # Load Powerlevel10k configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -63,9 +63,6 @@ PATH="$HOME/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
 # Load secrets
 [ -f ~/.secrets ] && source ~/.secrets
 
-# Enable new gcloud auth plugin
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
 # Expose Vault address
 export VAULT_ADDR=$VAULT_ADDR
 
@@ -92,6 +89,12 @@ export STRIPE_API_KEY=$STRIPE_API_KEY
 
 # Expose DEV_SCRIPT_TAG_URLS
 export DEV_SCRIPT_TAG_URLS=$DEV_SCRIPT_TAG_URLS
+
+# Expose ZSH path
+export ZSH=$(antidote path ohmyzsh/ohmyzsh)
+
+# Enable new gcloud auth plugin
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # Add SSH Keys to Keychain
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
