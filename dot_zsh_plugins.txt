@@ -1,0 +1,97 @@
+### Prompts
+#
+# You can make certain themes available to the built-in Zsh prompt command using the
+# `kind:fpath` annotation. A theme is not active for the prompt until this command is
+# run:
+#
+#   autoload -Uz promptinit && promptinit
+#   prompt ${prompt_name:-pure}
+#
+# There are two ways to load prompts.
+# - Add multiple prompt plugins to your `$fpath` with `kind:fpath` and then later in
+#   your .zshrc run the Zsh built-in `prompt` to select the theme.
+# - Or, just load one prompt like a regular plugin.
+#
+###
+romkatv/powerlevel10k
+
+### Completions
+#
+# You may want to add some additional completions to Zsh. Completions look in your fpath
+# for completion functions, which are functions named with a leading underscore
+# (eg: _git). You need to add all supplemental completions to your fpath prior to
+# running `compinit` to use completions functionality properly. You will want to find
+# a completion plugin that runs `compinit` for you, or you can run it yourself in
+# your .zshrc after antidote loads like this:
+#
+#   autoload -Uz compinit && compinit
+#
+###
+# zsh-users/zsh-completions is a popular plugin for adding supplemental completions.
+zsh-users/zsh-completions
+# Compinit plugins should be near the end of .zsh_plugins.txt so that $fpath has been
+# fully populated. Use zsh-utils for its completion plugin.
+belak/zsh-utils path:completion
+
+### Frameworks
+#
+# Frameworks are a collection of Zsh features, settings, and plugins meant to ease
+# Zsh configuration. Unfortunately, all that power can come with serious drawbacks.
+# Frameworks can often set more settings or aliases than you need, cluttering your Zsh
+# config and slowing things down. Use with caution!
+#
+# Frameworks are handled in antidote using the `path:location/of/plugin` annotation.
+#
+###
+
+### Framework: Oh-My-Zsh
+#
+# Oh-My-Zsh is a very popular Zsh framework. You might choose to use plugins from OMZ
+# in your own config. Depending on which plugins you use, you may also need to include
+# OMZ's entire "lib" directory. If you do this, be careful - "lib" configures a lot of
+# very broad settings. If you are familiar with what you are doing, you may choose to
+# only include parts of "lib".
+#
+#   # use all of lib
+#   ohmyzsh/ohmyzsh path:lib
+#   # -OR-, only use only the specific files we care about
+#   ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+#
+####
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/fzf
+ohmyzsh/ohmyzsh path:plugins/autojump
+ohmyzsh/ohmyzsh path:plugins/dirhistory
+ohmyzsh/ohmyzsh path:plugins/bgnotify
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/sudo
+ohmyzsh/ohmyzsh path:plugins/sdk
+ohmyzsh/ohmyzsh path:plugins/gradle
+ohmyzsh/ohmyzsh path:plugins/npm
+ohmyzsh/ohmyzsh path:plugins/yarn
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/docker-compose
+ohmyzsh/ohmyzsh path:plugins/docker-machine
+ohmyzsh/ohmyzsh path:plugins/gcloud
+
+grigorii-zander/zsh-npm-scripts-autocomplete
+redxtech/zsh-yup
+ntnyq/omz-plugin-pnpm
+
+### Utilities
+#
+# Utilities aren't traditional Zsh plugins - they aren't sourced Zsh scripts. Instead
+# they provide commands that can be executed from your terminal session. One good
+# example is zsh-bench, which is a utility that benchmarks your Zsh config. Utility
+# bundles can often be made available simply with the `kind:path` annotation.
+#
+###
+
+### Final Plugins
+#
+# Remember plugin order matters! Put plugins that need run last at the bottom of your
+# .zsh_plugins.txt file.
+#
+###
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions
