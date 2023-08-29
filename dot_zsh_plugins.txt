@@ -69,9 +69,6 @@ ohmyzsh/ohmyzsh path:plugins/sdk
 ohmyzsh/ohmyzsh path:plugins/gradle
 ohmyzsh/ohmyzsh path:plugins/npm
 ohmyzsh/ohmyzsh path:plugins/yarn
-ohmyzsh/ohmyzsh path:plugins/docker
-ohmyzsh/ohmyzsh path:plugins/docker-compose
-ohmyzsh/ohmyzsh path:plugins/docker-machine
 ohmyzsh/ohmyzsh path:plugins/gcloud
 
 grigorii-zander/zsh-npm-scripts-autocomplete
