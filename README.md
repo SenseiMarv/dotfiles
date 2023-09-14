@@ -70,14 +70,6 @@ The [Brewfile](https://github.com/SenseiMarv/dotfiles/blob/mac/Brewfile) can be 
 brew bundle dump --force
 ```
 
-### Update masfile
-
-The [masfile](https://github.com/SenseiMarv/dotfiles/blob/mac/masfile) can be updated by running the following command in the user directory:
-
-```bash
-mas list | sed -E 's/^[0-9]+[[:space:]]*//;s/ [^ ]*$//;s/[[:space:]]*$//' > masfile
-```
-
 ### Pull updates
 
 ```bash
