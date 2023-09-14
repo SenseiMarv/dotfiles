@@ -62,6 +62,22 @@ After editing a tracked file manually, it has to be re-added:
 chezmoi add $FILE
 ```
 
+### Update Brewfile
+
+The [Brewfile](https://github.com/SenseiMarv/dotfiles/blob/mac/Brewfile) can be updated by running the following command in the user directory:
+
+```bash
+brew bundle dump --force
+```
+
+### Update masfile
+
+The [masfile](https://github.com/SenseiMarv/dotfiles/blob/mac/masfile) can be updated by running the following command in the user directory:
+
+```bash
+mas list | sed -E 's/^[0-9]+[[:space:]]*//;s/ [^ ]*$//;s/[[:space:]]*$//' > masfile
+```
+
 ### Pull updates
 
 ```bash
