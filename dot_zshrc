@@ -11,8 +11,6 @@ fi
 
 # Initialize Antidote plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
-# Initialize Powerlevel10k prompt
-autoload -Uz promptinit && promptinit && prompt powerlevel10k
 
 # Load Powerlevel10k configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
