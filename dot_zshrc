@@ -92,7 +92,7 @@ export DEV_SCRIPT_TAG_URLS=$DEV_SCRIPT_TAG_URLS
 export ZSH=$(antidote path ohmyzsh/ohmyzsh)
 
 # Enable nvm current version symlink
-export NVM_SYMLINK_CURRENT=true
+export NVM_SYMLINK_CURRENT=True
 
 # Enable new gcloud auth plugin
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
