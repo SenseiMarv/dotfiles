@@ -65,6 +65,9 @@ PATH="$HOME/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
 export VAULT_ADDR=$VAULT_ADDR
 
 # Expose ADMIN_CLIENT_SECRET
+export ADMIN_CLIENT_ID=$ADMIN_CLIENT_ID
+
+# Expose ADMIN_CLIENT_SECRET
 export ADMIN_CLIENT_SECRET=$ADMIN_CLIENT_SECRET
 
 # Expose CLOUDAMQP_USER
