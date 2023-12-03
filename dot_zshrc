@@ -35,7 +35,7 @@ source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.
 source "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # Load Docker Desktop configuration
-source /Users/mstickel/.docker/init-zsh.sh || true
+#source /Users/mstickel/.docker/init-zsh.sh || true
 
 # Load navi completion
 eval "$(navi widget zsh)"
@@ -50,7 +50,7 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 source ~/.openconnect_vpn.sh
 
 # Load pipx
-export PATH="$PATH:/Users/mstickel/.local/bin"
+export PATH="$PATH:/Users/marvinstickel/.local/bin"
 
 # Load debug-env
 PATH="$HOME/projects/beyond/ng-dev-tools/debug-env:${PATH}"
