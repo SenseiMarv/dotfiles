@@ -23,8 +23,9 @@ antidote load
 
 # Load nvm configuration and completion
 export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+export NVM_HOMEBREW=$(brew --prefix nvm)
+[ -s "$NVM_HOMEBREW/nvm.sh" ] && . "$NVM_HOMEBREW/nvm.sh"
+[ -s "$NVM_HOMEBREW/etc/bash_completion.d/nvm" ] && . "$NVM_HOMEBREW/etc/bash_completion.d/nvm"
 
 # Load SDKMAN! configuration
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -110,6 +111,9 @@ alias vim='nvim'
 
 # Enable automatic update for oh-my-zsh
 zstyle ':omz:update' mode auto
+
+# Enable .nvmrc autoload
+zstyle ':omz:plugins:nvm' autoload yes
 
 # Fix slow paste speeds with zsh-syntax-highlighting
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
