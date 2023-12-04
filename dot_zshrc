@@ -9,6 +9,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Enable .nvmrc autoload
+zstyle ':omz:plugins:nvm' autoload yes
+
 # Initialize Antidote plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
@@ -111,9 +114,6 @@ alias vim='nvim'
 
 # Enable automatic update for oh-my-zsh
 zstyle ':omz:update' mode auto
-
-# Enable .nvmrc autoload
-zstyle ':omz:plugins:nvm' autoload yes
 
 # Fix slow paste speeds with zsh-syntax-highlighting
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
