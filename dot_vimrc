@@ -4,7 +4,7 @@ set noswapfile " Disable swapfile
 " Editor settings
 syntax on " Enable syntax highlighting
 set number " Enable line numbers
-set spell spelllang=en_us,de_de
+set spell spelllang=en_us
 set incsearch " Enable search on typing
 set ignorecase " Disable case sensitive search
 set hlsearch " Enable highlighting of all search results
