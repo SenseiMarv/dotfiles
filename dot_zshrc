@@ -118,9 +118,9 @@ alias vim='nvim'
 # Add swamp alias
 alias aws_prisma_ent="swamp --target-profile default --target-role power-user --profile prisma-idp --account 094750960340 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get d3rwxmmb2er4xixdqyvfi76gdu --otp'"
 alias aws_prisma_int="swamp --target-profile default --target-role power-user --profile prisma-idp --account 071197997811 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get d3rwxmmb2er4xixdqyvfi76gdu --otp'"
-alias aws_prisma_tst="swamp --target-profile default --target-role power-user --profile prisma-idp --account 806515583069 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get d3rwxmmb2er4xixdqyvfi76gdu --otp'"
+alias aws_prisma_test="swamp --target-profile default --target-role power-user --profile prisma-idp --account 806515583069 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get d3rwxmmb2er4xixdqyvfi76gdu --otp'"
 alias aws_prisma_kon="swamp --target-profile default --target-role power-user --profile prisma-idp --account 303079077654 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get d3rwxmmb2er4xixdqyvfi76gdu --otp'"
-alias aws_prisma_prd="swamp --target-profile default --target-role power-user --profile prisma-idp --account 033690830626 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get d3rwxmmb2er4xixdqyvfi76gdu --otp'"
+alias aws_prisma_prod="swamp --target-profile default --target-role power-user --profile prisma-idp --account 033690830626 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get d3rwxmmb2er4xixdqyvfi76gdu --otp'"
 function aws_prisma_artifacts {
   swamp --target-profile default --target-role prisma-artifacts-user --profile prisma-idp --account 762873164855 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get d3rwxmmb2er4xixdqyvfi76gdu --otp'
   aws codeartifact login --tool npm --repository mirror --domain mirror --namespace @prisma-internal
