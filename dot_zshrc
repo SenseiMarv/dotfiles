@@ -98,6 +98,9 @@ export DEV_SCRIPT_TAG_URLS=$DEV_SCRIPT_TAG_URLS
 # Expose ZSH path
 export ZSH=$(antidote path ohmyzsh/ohmyzsh)
 
+# Expose ANDROID_NDK_HOME
+export ANDROID_NDK_HOME="$HOMEBREW_PREFIX/share/android-ndk"
+
 # Enable new gcloud auth plugin
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
