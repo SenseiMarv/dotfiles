@@ -21,9 +21,6 @@ antidote load
 # Load fzf configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Load autojump configuration
-[ -f $HOMEBREW_PREFIX/etc/profile.d/autojump.sh ] && . $HOMEBREW_PREFIX/etc/profile.d/autojump.sh
-
 # Load nvm configuration and completion
 export NVM_DIR="$HOME/.nvm"
 export NVM_HOMEBREW=$(brew --prefix nvm)
@@ -137,6 +134,9 @@ zstyle ':omz:update' mode auto
 
 # Fix slow paste speeds with zsh-syntax-highlighting
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+
+# Enable zoxide. Keep at the bottom of this file.
+eval "$(zoxide init zsh)"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
