@@ -11,6 +11,7 @@
 
 [gpg "ssh"]
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  allowedSignersFile = /Users/marvinstickel/.config/git/allowed_signers
 
 [init]
 	defaultBranch = main
