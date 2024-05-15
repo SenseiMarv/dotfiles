@@ -129,6 +129,9 @@ function aws_prisma_artifacts {
   aws codeartifact login --tool npm --repository mirror --domain mirror --namespace @prisma-internal
 }
 
+# Remove conflicting aliases
+unalias gk
+
 # Enable automatic update for oh-my-zsh
 zstyle ':omz:update' mode auto
 
