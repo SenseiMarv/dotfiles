@@ -133,7 +133,7 @@ function aws_prisma_artifacts {
 }
 
 # Remove conflicting aliases
-unalias gk
+unalias gk # Conflict with gitkraken-cli
 
 # Enable automatic update for oh-my-zsh
 zstyle ':omz:update' mode auto
