@@ -59,6 +59,9 @@ PATH="$HOME/projects/beyond/ng-dev-tools/debug-env:${PATH}"
 # Load rabbitmq.py
 PATH="$HOME/projects/beyond/ng-dev-tools/cloudamqp-tools:${PATH}"
 
+# Load Console Ninja
+PATH=~/.console-ninja/.bin:$PATH
+
 # Load secrets
 [ -f ~/.secrets ] && source ~/.secrets
 
