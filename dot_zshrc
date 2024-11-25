@@ -60,6 +60,8 @@ export ANDROID_NDK_HOME="$HOMEBREW_PREFIX/share/android-ndk"
 
 # Expose ANDROID_HOME
 export ANDROID_HOME="/Users/marvinstickel/Library/Android/sdk"
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Add SSH Keys to Keychain
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
