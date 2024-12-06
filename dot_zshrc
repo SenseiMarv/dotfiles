@@ -87,6 +87,12 @@ function aws_prisma_artifacts {
 # Remove conflicting aliases
 unalias gk # Conflict with gitkraken-cli
 
+# Swap pi and pin alias
+alias TEMP_PI_ALIAS="${aliases[pi]}"
+alias pi="${aliases[pin]}"
+alias pin="${TEMP_PI_ALIAS}"
+unalias TEMP_PI_ALIAS
+
 # Enable automatic update for oh-my-zsh
 zstyle ':omz:update' mode auto
 
