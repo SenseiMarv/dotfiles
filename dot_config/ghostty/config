@@ -1,0 +1,6 @@
+theme = CustomAtomOneDark
+font-family = MesloLGS NF
+cursor-style = bar
+cursor-click-to-move = true
+copy-on-select = true
+confirm-close-surface = false
