@@ -32,6 +32,7 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # os_icon               # os identifier
+    aws_vault               # aws vault
     context                 # user@hostname
     dir                     # current directory
     vcs                     # git status
@@ -1414,7 +1415,8 @@
   #
   # - P9K_AWS_PROFILE  The name of the current AWS profile.
   # - P9K_AWS_REGION   The region associated with the current AWS profile.
-  typeset -g POWERLEVEL9K_AWS_CONTENT_EXPANSION='${P9K_AWS_PROFILE//\%/%%}${P9K_AWS_REGION:+ ${P9K_AWS_REGION//\%/%%}}'
+  #typeset -g POWERLEVEL9K_AWS_CONTENT_EXPANSION='${P9K_AWS_PROFILE//\%/%%}${P9K_AWS_REGION:+ ${P9K_AWS_REGION//\%/%%}}'
+  typeset -g POWERLEVEL9K_AWS_CONTENT_EXPANSION='${P9K_AWS_PROFILE//\%/%%}'
 
   #[ aws_eb_env: aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/) ]#
   # AWS Elastic Beanstalk environment color.
@@ -1423,12 +1425,12 @@
   # Custom icon.
   # typeset -g POWERLEVEL9K_AWS_EB_ENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
-  prompt_aws() {
-    [[ -z "$AWS_VAULT" || "$SHOW_AWS_PROMPT" = false ]] && return
-    case "$AWS_VAULT" in
-      *prod|prod*) prompt_segment "$AGNOSTER_AWS_PROD_BG" "black"  "AWS: ${AWS_VAULT:gs/%/%%}" ;;
-      *) prompt_segment "$AGNOSTER_AWS_BG" "$AGNOSTER_AWS_FG" "AWS: ${AWS_VAULT:gs/%/%%}" ;;
-    esac
+  function prompt_aws_vault() {
+    if [ -z "$AWS_VAULT" ]; then
+      return # aws-vault session is not active
+    fi
+
+    p10k segment -b yellow -t "AWS: $AWS_VAULT"
   }
 
   ##########[ azure: azure account name (https://docs.microsoft.com/en-us/cli/azure) ]##########
