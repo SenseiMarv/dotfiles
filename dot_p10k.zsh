@@ -1423,6 +1423,14 @@
   # Custom icon.
   # typeset -g POWERLEVEL9K_AWS_EB_ENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
+  prompt_aws() {
+    [[ -z "$AWS_VAULT" || "$SHOW_AWS_PROMPT" = false ]] && return
+    case "$AWS_VAULT" in
+      *prod|prod*) prompt_segment "$AGNOSTER_AWS_PROD_BG" "black"  "AWS: ${AWS_VAULT:gs/%/%%}" ;;
+      *) prompt_segment "$AGNOSTER_AWS_BG" "$AGNOSTER_AWS_FG" "AWS: ${AWS_VAULT:gs/%/%%}" ;;
+    esac
+  }
+
   ##########[ azure: azure account name (https://docs.microsoft.com/en-us/cli/azure) ]##########
   # Show azure only when the the command you are typing invokes one of these tools.
   # Tip: Remove the next line to always show azure.
