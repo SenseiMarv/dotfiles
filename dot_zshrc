@@ -49,9 +49,6 @@ PATH=~/.console-ninja/.bin:$PATH
 # Load secrets
 [ -f ~/.secrets ] && source ~/.secrets
 
-# Expose AWS MFA device ID from secrets - PRISMA
-export MFA_DEVICE_ID=$MFA_DEVICE_ID
-
 # Expose ZSH path
 export ZSH=$(antidote path ohmyzsh/ohmyzsh)
 
@@ -73,16 +70,16 @@ alias lsc='colorls -A --sd'
 alias vi='nvim'
 alias vim='nvim'
 
-# Add swamp alias - PRISMA
-alias aws_prisma_ent="swamp --target-profile default --target-role power-user --profile prisma-idp --account 094750960340 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get jeqiksaua6jisn5zlwblngzr4e --otp'"
-alias aws_prisma_int="swamp --target-profile default --target-role power-user --profile prisma-idp --account 071197997811 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get jeqiksaua6jisn5zlwblngzr4e --otp'"
-alias aws_prisma_test="swamp --target-profile default --target-role power-user --profile prisma-idp --account 806515583069 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get jeqiksaua6jisn5zlwblngzr4e --otp'"
-alias aws_prisma_kon="swamp --target-profile default --target-role power-user --profile prisma-idp --account 303079077654 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get jeqiksaua6jisn5zlwblngzr4e --otp'"
-alias aws_prisma_prod="swamp --target-profile default --target-role power-user --profile prisma-idp --account 033690830626 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get jeqiksaua6jisn5zlwblngzr4e --otp'"
-function aws_prisma_artifacts {
-  swamp --target-profile default --target-role prisma-artifacts-user --profile prisma-idp --account 762873164855 --mfa-device $MFA_DEVICE_ID --region eu-central-1 -mfa-exec 'op item get jeqiksaua6jisn5zlwblngzr4e --otp'
-  aws codeartifact login --tool npm --repository mirror --domain mirror --namespace @prisma-internal
-}
+# Add aws-vault alias - PRISMA
+alias aws_prisma_ent='aws-vault exec ent'
+alias aws_prisma_int='aws-vault exec int'
+alias aws_prisma_kon='aws-vault exec kon'
+alias aws_prisma_test='aws-vault exec test'
+alias aws_prisma_prod='aws-vault exec prod'
+alias aws_prisma_artifacts='aws-vault exec artifacts'
+alias aws_prisma_artifacts_server='aws-vault exec artifacts --ec2-server'
+alias aws_prisma_dev_service='aws-vault exec service'
+alias aws_prisma_npm='aws codeartifact login --tool npm --repository mirror --domain mirror --domain-owner 762873164855 --region eu-central-1'
 
 # Remove conflicting aliases
 unalias gk # Conflict with gitkraken-cli
