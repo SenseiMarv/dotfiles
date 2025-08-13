@@ -28,18 +28,18 @@
 [interactive]
 	diffFilter = delta --color-only
 
-# Use VSCode as default diff and merge tool
+# Use Cursor as default diff and merge tool
 [merge]
-	tool = vscode
+	tool = cursor
 	conflictstyle = diff3
-[mergetool "vscode"]
-	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+[mergetool "cursor"]
+	cmd = cursor --wait --merge $REMOTE $LOCAL $BASE $MERGED
 
 [diff]
-	tool = vscode
+	tool = cursor
 	colorMoved = default
-[difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "cursor"]
+	cmd = cursor --wait --diff $LOCAL $REMOTE
 
 [alias]
 	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
