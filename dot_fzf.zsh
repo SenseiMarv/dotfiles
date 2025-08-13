@@ -22,6 +22,7 @@ _fzf_comprun() {
     cd)           fzf "$@" --preview 'tree -C {} | head -200' --bind shift-up:preview-page-up,shift-down:preview-page-down ;;
     export|unset) fzf "$@" --preview "eval 'echo \$'{}" ;;
     ssh)          fzf "$@" --preview 'dig {}' ;;
+    xxh)          fzf "$@" --preview 'dig {}' ;;
     *)            fzf "$@" ;;
   esac
 }
