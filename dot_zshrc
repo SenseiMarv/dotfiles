@@ -70,10 +70,6 @@ alias lsc='colorls -A --sd'
 alias vi='nvim'
 alias vim='nvim'
 
-# Add xxh alias
-alias xxh-connect='xxh +s zsh +I xxh-plugin-zsh-ohmyzsh'
-alias xxh-docker='xxh +s zsh +I xxh-plugin-prerun-docker'
-
 # Add aws-vault alias - PRISMA
 alias aws_prisma_ent='aws-vault exec ent'
 alias aws_prisma_int='aws-vault exec int'
