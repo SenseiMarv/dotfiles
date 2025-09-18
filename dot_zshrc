@@ -79,7 +79,7 @@ alias aws_prisma_prod='aws-vault exec prod'
 alias aws_prisma_artifacts='aws-vault exec artifacts'
 alias aws_prisma_artifacts_server='aws-vault exec artifacts --ec2-server'
 alias aws_prisma_dev_service='aws-vault exec service'
-alias aws_prisma_npm='aws codeartifact login --tool npm --repository mirror --domain mirror --domain-owner 762873164855 --region eu-central-1 --namespace @prisma-internal'
+alias npm_aws_prisma='aws codeartifact login --tool npm --repository mirror --domain mirror --domain-owner 762873164855 --region eu-central-1 --namespace @prisma-internal'
 
 # Remove conflicting aliases
 unalias gk # Conflict with gitkraken-cli
