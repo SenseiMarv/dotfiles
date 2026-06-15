@@ -6,6 +6,10 @@ Include ~/.orbstack/ssh/config
 Host github.com
     UpdateHostKeys yes
 
+Host the-vault.dev
+    User senseimarv
+    Port 2302
+
 Host *
     UseKeychain yes
     AddKeysToAgent yes
