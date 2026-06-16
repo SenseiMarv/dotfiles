@@ -198,8 +198,12 @@ cask "sweet-home3d"
 cask "t3-code"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
+# Menu bar manager
+cask "thaw"
 # Open-source code editor
 cask "visual-studio-code"
+# Web browser with built-in email client focusing on customization and control
+cask "vivaldi"
 # Rust-based terminal
 cask "warp"
 # Multiplayer code editor
@@ -209,6 +213,7 @@ cask "zen"
 mas "1Password for Safari", id: 1569813296
 mas "Gifski", id: 1351639930
 mas "Irvue", id: 1039633667
+mas "QuickRight", id: 6763963598
 mas "ScreenBrush", id: 1233965871
 mas "TestFlight", id: 899247664
 mas "Tuneful", id: 6739804295
