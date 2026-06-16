@@ -160,8 +160,6 @@ cask "keepassxc"
 cask "keycastr"
 # Support for Logitech G gear
 cask "logitech-g-hub"
-# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
-cask "mac-mouse-fix"
 # Clipboard manager
 cask "maccy"
 # Shows the next meeting in the menu bar
@@ -174,6 +172,8 @@ cask "microsoft-edge"
 cask "microsoft-office"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
+# Smooths scrolling and set mouse scroll directions independently
+cask "mos"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Replacement for Docker Desktop
