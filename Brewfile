@@ -150,8 +150,6 @@ cask "iina"
 cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Open-source screen recorder built with web technology
 cask "kap"
 # Password manager app
