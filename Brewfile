@@ -120,6 +120,8 @@ cask "alt-tab"
 cask "android-ndk"
 # Test localhost and staging websites
 cask "browserstacklocal"
+# Ghostty-based terminal with vertical tabs and notifications for AI coding agents
+cask "cmux"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # OpenAI's Codex desktop app for managing coding agents
