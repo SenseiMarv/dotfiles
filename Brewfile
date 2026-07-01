@@ -114,10 +114,10 @@ cask "adobe-acrobat-reader"
 cask "adobe-creative-cloud"
 # Image editing and design software
 cask "affinity"
-# Enable Windows-like alt-tab
-cask "alt-tab"
 # Toolset to implement parts of Android apps in native code
 cask "android-ndk"
+# Replacement for the built-in Cmd+Tab app switcher
+cask "bettercmdtab"
 # Test localhost and staging websites
 cask "browserstacklocal"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
@@ -206,6 +206,8 @@ cask "visual-studio-code"
 cask "vivaldi"
 # Rust-based terminal
 cask "warp"
+# Connect to Windows
+cask "windows-app"
 # Multiplayer code editor
 cask "zed"
 # Gecko based web browser
