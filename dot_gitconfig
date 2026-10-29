@@ -50,9 +50,13 @@
 	reflog-delta = !git reflog -p | delta
 	add-delta = !git add -p | delta
 	diff-dunk = !git diff | dunk | delta
+	rd = "!f() { old=$1; new=${2:-HEAD}; main=$(git rev-parse --abbrev-ref origin/HEAD 2>/dev/null || echo origin/master); git --no-pager range-diff \"$(git merge-base \"$main\" \"$old\")..$old\" \"$(git merge-base \"$main\" \"$new\")..$new\"; }; f"
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
+
+[url "git@gitlab.com:"]
+    insteadOf = https://gitlab.com/
 
 [delta]
 	navigate = true
